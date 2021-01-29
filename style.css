@@ -1,0 +1,88 @@
+body {
+margin: 0;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    align-items: center;
+    background-color: #546de5;
+    font-family: 'Potta One', cursive;
+
+}
+.navbar_logo{
+    font-size: 20px;
+
+}
+.navbar_logo i {
+    color: #f7d794;
+}
+.navbar_menu {
+    
+display: flex;
+list-style: none;
+padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+    
+
+}
+.navbar_menu li :hover{
+background-color: #f3a683;
+border-radius: 3px;
+}
+
+.navbar_icon {
+    display: flex;
+    list-style: none;
+    justify-content: row;
+    font-size: 24px;
+}
+.navbar_icon li{
+    padding: 8px 12px;
+}
+.navbar_toggleBt{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #f7d794;;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li{
+
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_icon {
+        display: none;
+
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggleBt {
+        display: block;
+    }
+    .navbar_menu.active,
+    .navbar_icon.active {  
+        display: flex;
+    }
+}
